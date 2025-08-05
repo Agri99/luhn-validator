@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "luhn-validator"
+version = "0.1.0"
+description = "A simple python library to validate numbers using the Luhn Algorithm"
+authors = [{name = "Agriana", email = "agriana99@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+keywords = ["luhn", "algorithm", "validator", "credit card"]
+
+[project.scripts]
+luhn-validator = "luhn.luhn:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["luhn"]
